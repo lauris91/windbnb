@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import './styles/index.scss'
+import { Header, Stay } from './components'
+import stays from './stays.json'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <Header />
+      <main>
+        <div className='information-container d-flex'>
+          <h2>Stays in Finland</h2>
+          <h5>12+ stays</h5>
+        </div>
+        <div className='stays-container d-flex'>
+          {stays.map(stay => (
+            <Stay key={stay.title} data={stay} />
+          ))}
+        </div>
+      </main>
+      <footer>
+        created by <strong>lauris91</strong> - devChallenges.io
+      </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
