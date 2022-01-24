@@ -27,7 +27,7 @@ const Stay = ({
         </div>
         <div className='stay-description--rating d-flex'>
           <span className='material-icons'>star</span>
-          {rating}
+          {parseFloat(rating).toFixed(2)}
         </div>
       </div>
       <h3>{title}</h3>

@@ -1,0 +1,29 @@
+$breakpoints: (
+  'large': 1200px,
+  'desktop': 992px,
+  'tablet': 768px,
+  'mobile': 576px,
+);
+
+// Responsive media
+@mixin responsive-size-up($size) {
+  $breakpoint-size: map-get($breakpoints, $size);
+
+  @media (min-width: $breakpoint-size) {
+    @content;
+  }
+}
+
+@mixin responsive-size-down($size) {
+  $breakpoint-size: map-get($breakpoints, $size);
+
+  @media (max-width: $breakpoint-size) {
+    @content;
+  }
+}
+
+@mixin trim() {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -2,7 +2,7 @@
   {
     "city": "Helsinki",
     "country": "Finland",
-    "superHost": false,
+    "superHost": true,
     "title": "Stylist apartment in center of the city",
     "rating": 4.4,
     "maxGuests": 3,
