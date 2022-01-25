@@ -241,8 +241,8 @@
         gap: 20px;
         position: absolute;
         top: 80px;
-        visibility: hidden;
-        animation: showElement 0s 0.3s forwards;
+        // visibility: hidden;
+        // animation: showElement 0s 0.3s forwards;
 
         @include responsive-size-down(tablet) {
           top: 160px;
